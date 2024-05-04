@@ -1,1 +1,47 @@
-# deepstack-integrations
+# Deepstack Integrations
+
+This repository is an index of Deepstack integrations that can be used with a Deepstack Pipeline or Agent.
+
+These integrations are maintained by their respective owner or authors. You can browse them on the [Deepstack Integrations](https://deepstack.khulnasoft.com/integrations) page, where you will find information on the Author(s), installation and usage of each tool.
+
+## What are Deepstack Integrations?
+
+Deepstack Integrations are a Document Store, Model Provider, Custom Component, Monitoring Tool or Evaluation Framework that are either external packages or additional technologies that can be used with Deepstack. Some integrations may be maintained by the khulnasoft team, others are community contributions owned by the authors of the integration. Read more about Deepstack Integrations in [Introduction to Integrations](https://docs.deepstack.khulnasoft.com/docs/integrations).
+
+## Looking for prompts?
+
+Prompts for the `PromptNode` and `Agent` can be found on our [Prompt Hub](https://prompthub.khulnasoft.com).
+To contribute a prompt, follow instructions in the [`prompthub`](https://github.com/khulnasoft/prompthub) repo.
+
+## How to contribute
+To contribute, create a PR add an `.md` file to the `integrations/` directory.
+👉 You can start off with the [draft integration page](https://github.com/khulnasoft/deepstack-integrations/blob/main/draft-integration.md)
+A few things to include in the file 👇
+The frontmatter has to include the following:
+```
+---
+layout: integration (required)
+name: Name of your integration (required)
+description: A short description (this will appear on the front page element of your integration on the website) (required)
+authors:
+    - name: Name of Author 1 (required)
+      socials:
+        github: include if desired
+        twitter: include if desired
+    - name: Name of Author 2
+      socials:
+        github: include if desired
+        twitter: include if desired
+pypi: url of pypi package if exists
+repo: url of GitHub repo if exists
+report_issue: url to where people can report an issue with the integration 
+type: Document Store OR Model Provider OR Data Ingestion OR Monitoring Tool or Evaluation Framework OR Custom Component (required)
+logo: /logos/your-logo.png (optional)
+version: Deepstack 2.0 (if it's for Deepstack 2.0)
+---
+```
+Note that there should be at least one of either the `pypi` or `repo` fields for us to merge the integration.
+
+Then, please add as much information and instructions about your Integration as possible as the body of your `.md` file.
+
+Open a Pull Request, and congrats, if all goes well, you will see your integration on the integrations page in no time 🥳
